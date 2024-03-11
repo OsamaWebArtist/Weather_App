@@ -1,9 +1,17 @@
 import { createStore } from "vuex";
-
+/*eslint-disable*/
 export default createStore({
-  state: {},
+  state: {
+    date: "",
+    temp: "",
+    appearTemp: "",
+    humidity:"",
+    wind_speed:"",
+  },
   getters: {},
   mutations: {},
-  actions: {},
+  actions: {
+
+  },
   modules: {},
 });
