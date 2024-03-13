@@ -3,9 +3,7 @@
   <appView />
   <router-view />
 </template>
-
-<script>
-/*eslint-disable*/
+<script>/*eslint-disable*/
 import appView from "./views/appView.vue";
 
 export default {

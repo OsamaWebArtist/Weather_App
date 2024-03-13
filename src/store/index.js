@@ -1,5 +1,5 @@
-import { createStore } from "vuex";
 /*eslint-disable*/
+import { createStore } from "vuex";
 export default createStore({
   state: {
     date: "",
