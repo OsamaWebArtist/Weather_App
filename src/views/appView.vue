@@ -40,11 +40,16 @@
                         :src="day_Night && icons.day === curr ? icons.icon : icons.Night_icon"></iframe>
 
                     <div class="all-details">
-                        <div><i class="fa-solid fa-temperature-quarter"></i> <span>Feels Like : {{
+                        <div><i class="fa-solid fa-temperature-quarter"></i> <span>Feels Like : <span class="space">
+                                </span> {{
                             Math.trunc(appearTemp)
                         }}°C</span></div>
-                        <div><i class="fa-solid fa-droplet"> </i> <span>Humidity : {{ humidity }}%</span></div>
-                        <div><i class="fa-solid fa-wind"> </i> <span>Wind : {{ Math.trunc(wind_speed) }} Km/h</span>
+                        <div><i class="fa-solid fa-droplet"> </i> <span>Humidity : <span class="space"> </span> {{
+                                humidity }}%</span>
+                        </div>
+                        <div><i class="fa-solid fa-wind"> </i> <span>Wind : <span class="space"> </span> {{
+                            Math.trunc(wind_speed) }}
+                                Km/h</span>
                         </div>
                     </div>
                 </div>
@@ -110,9 +115,9 @@ export default {
 
         dayOrNight() {
             if (this.day_Night === 1) {
-                document.body.style.backgroundImage = "url(http://localhost:8080/img/day.b7520a12.jpeg)"
+                document.body.style.backgroundImage = "url(/Weather_App/img/day.b7520a12.jpeg)"
             } else {
-                document.body.style.backgroundImage = "url(http://localhost:8080/img/night.228a55e2.jpeg)"
+                document.body.style.backgroundImage = "url(/Weather_App/img/night.228a55e2.jpeg)"
             }
         },
 
@@ -141,7 +146,7 @@ export default {
         },
 
         weatherCity() {
-            fetch(`http://api.weatherapi.com/v1/forecast.json?key=aacdb87177484da2864103602240203&q=${this.city.toLowerCase()}&days=5&aqi=yes&alerts=no`)
+            fetch(`http://api.weatherapi.com/v1/forecast.json?key=4ce50e7e00f74065b54113244241603&q=${this.city.toLowerCase()}&days=5&aqi=yes&alerts=yes`)
                 .then(response => response.json())
                 .then(data => {
                     this.cityname = data.location.name
