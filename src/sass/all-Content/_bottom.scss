@@ -1,0 +1,70 @@
+@import "../globale-style/root-styles.scss";
+.bottom-app{
+
+
+    .container{
+
+        
+        .days{
+            background-color: var(--lowOpacity-navy);
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+            .day{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 150px;
+                > span{
+
+                }
+                & iframe{
+
+                }
+                & span{
+
+                }
+                & p{
+
+                }
+            }
+            }
+                
+
+            
+    }
+}
+
+
+/*responsive head */
+@media (max-width:990px) {
+    .bottom-app{
+
+
+        .container{
+    
+            
+            .days{
+
+                .day{
+                    text-align: center;
+                    > span{
+    
+                    }
+                    & iframe{
+    
+                    }
+                    & span{
+    
+                    }
+                    & p{
+    
+                    }
+                }
+                }
+                    
+    
+                
+        }
+    }
+}
