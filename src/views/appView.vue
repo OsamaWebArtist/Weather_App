@@ -146,7 +146,7 @@ export default {
         },
 
         weatherCity() {
-            fetch(`https://api.weatherapi.com/v1/forecast.json?key=4ce50e7e00f74065b54113244241603&q=${this.city.toLowerCase()}&days=5&aqi=yes&alerts=yes`)
+            fetch(`https://api.weatherapi.com/v1/forecast.json?key=cfa0ae80265c46babe292833241804&q=${this.city.toLowerCase()}&days=5&aqi=yes&alerts=yes`)
                 .then(response => response.json())
                 .then(data => {
                     this.cityname = data.location.name
